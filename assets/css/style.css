@@ -1,0 +1,482 @@
+/* 11 novembre */
+.jeu {
+    color: aliceblue;
+    
+    text-align: center;
+}
+
+
+/* 7 novembre */
+
+.notes {
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 3-4-5 novembre */
+
+/* cursor animation */
+
+#anime {
+    position: absolute;
+    z-index: 4;
+    translate: 0 40vw;
+
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-color: #8e6aa1;
+}
+
+
+
+/* Page index */
+header {
+    margin-bottom: 5vw;
+}
+
+.picture {
+    width: 20vw;
+    height: 20vw;
+
+    padding-top: 10vw;
+    padding-left: 20vw;
+
+    translate: 0 -100px;
+
+}
+
+#picofme {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+
+    opacity: 100%;
+
+    /* rotate: calc(360deg * var(--progressSpin));
+    animation: spin 30s linear infinite; */
+}
+
+@property --progressSpin {
+    initial-value: 0;
+    inherits: false;
+    syntax: "<number>";
+}
+
+
+@keyframes spin {
+    0% {
+    --progressSpin: 0;
+  }
+  100% {
+    --progressSpin: 1;
+  }
+}
+
+
+
+.moving-circles {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#circle1 {
+    background-color: aqua;
+    transform: translate(-200px, -400px);
+
+    --PI: 3.1415;
+    translate: calc(var(--progress) * 100vw) calc(sin(var(--PI) * var(--progress)) * 50vh);
+    
+    animation: progress 20s linear infinite;
+}
+
+#circle2 {
+    background-color: rgb(0, 255, 170);
+    transform: translate(200px, -700px);
+
+    --PI: 3.1415;
+    translate: calc(var(--progress) * 100vw) calc(sin(var(--PI) * var(--progress)) * 50vh);
+    animation: progress 20s linear infinite;
+    animation-delay: 5s;
+}
+
+#circle3 {
+    background-color: rgb(200, 255, 0);
+    transform: translate(100vw, -400px);
+
+    --PI: 3.1415;
+    translate: calc(var(--progress) * -100vw) calc(sin(var(--PI) * var(--progress)) * 50vh);
+    animation: progress 20s linear infinite;
+    animation-delay: 2s;
+}
+
+#circle4 {
+    background-color: rgb(187, 135, 202);
+    transform: translate(100vw, -200px);
+
+    --PI: 3.1415;
+    translate: calc(var(--progress) * -100vw) calc(sin(var(--PI) * var(--progress)) * -50vh);
+    animation: progress 20s linear infinite;
+    animation-delay: 1s;
+}
+
+@property --progress {
+  initial-value: 0;
+  inherits: false;
+  syntax: "<number>";
+}
+
+@keyframes progress {
+  0% {
+    --progress: 0;
+    opacity: 0;
+  }
+  50%{
+    opacity: 20%;
+  }
+  100% {
+    --progress: 1;
+    opacity: 0;
+  }
+}
+
+#menu {
+    background-image: url(../img/cd.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-color: black;
+    
+
+    /* position: absolute; */
+    width: 50vw;
+    height: 50vw;
+
+    --menuWidth : 50vw;
+    --menuHeight: 50vw;
+
+    border-radius: 50%;
+    z-index: -1;
+    overflow: visible;
+
+    /* translate: 25vw -30vw; */
+    translate: 25vw 0;
+    /* translate: 0 30vw; */
+
+
+    background-color: rgb(123, 121, 133);
+    display: inline-block;
+    grid-template-columns: auto auto auto auto auto auto;
+
+    rotate: calc(360deg * var(--progressSpin) * -1);
+    animation: spin 60s linear infinite;
+}
+
+#menuCD {
+    position: absolute;
+    height: 18vw;
+    width: 18vw;
+    border-radius: 50%;
+    background-color: #696983;
+    translate: calc(var(--menuWidth)/2 - 18vw/2) calc(var(--menuHeight)/2 - 18vw/2);
+    z-index: 1;
+}
+
+#menu:hover{
+    padding:2px;
+    /* animation-play-state: paused; */
+}
+
+.controls {
+    color: #4d4a64;
+    font-size: 2vw;
+    font-family: fantasy;
+}
+
+.controls:hover {
+    cursor: pointer;
+}
+
+#controlPause {
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+    translate: 48.5vw 34vw;
+}
+
+#controlG {
+    position: absolute;
+    z-index: 3;
+    padding: 10px;
+
+    rotate: 30deg;
+    translate: 20vw 35vw;
+}
+    
+#controlD {
+    position: absolute;
+    z-index: 3;
+    padding: 5px;
+
+    rotate: -30deg;
+    translate: 80vw 35vw;
+}
+
+#controlG:hover{
+    cursor: pointer;
+}
+
+#controlD:hover{
+    cursor: pointer;
+}
+
+
+#menu1{ /* Notes */
+    position: absolute;
+    translate: 1vw 28vw;
+    rotate: 60deg;
+}
+
+#menu2{ /* Mes projets */
+    position: absolute;
+    translate: 7vw 35vw;
+    rotate: 30deg;
+}
+
+#menu3{ /* Accueil */
+    position: absolute;
+    translate: 17vw 41vw;
+}
+
+#menu4{ /* Mon resume */
+    position: absolute;
+    translate: 27vw 38vw;
+    rotate: -30deg;
+}
+ 
+#menu5{ /* Me contacter */
+    position: absolute;
+    translate: 35vw 32vw;
+    rotate: -60deg;
+}
+
+#menu6{ /* English */
+    position: absolute;
+    translate: 41vw 22vw;
+    rotate: -90deg;
+}
+
+#menu7{ /* Notes */
+    position: absolute;
+    translate: 39vw 11vw;
+    rotate: -120deg;
+}
+
+#menu8{ /* Mes projets */
+    position: absolute;
+    translate: 31vw 4vw;
+    rotate: -150deg;
+}
+
+#menu9{ /* Accueil */
+    position: absolute;
+    translate: 23vw -1vw;
+    rotate: -180deg;
+}
+
+#menu10{ /* Mon resume */
+    position: absolute;
+    translate: 14vw 2vw;
+    rotate: 150deg;
+}
+ 
+#menu11{ /* Me contacter */
+    position: absolute;
+    translate: 5vw 8vw;
+    rotate: 120deg;
+}
+
+#menu12{ /* English */
+    position: absolute;
+    translate: 0vw 17vw;
+    rotate: 90deg;
+}
+
+
+
+
+/* 29 octobre */
+.nav-cd {
+    padding: 5vw;
+    z-index: 2;
+}
+
+.nav-cd a{
+    color: #45425a;
+    font-size: 1.5vw;
+    font-family: fantasy;
+    text-decoration: none;
+    position: absolute;
+    padding: 5px;
+}
+
+.nav-cd a:hover{
+    font-size: 1.6vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#240c31;
+    translate: 0 -30vw;
+    overflow-x: hidden;
+}
+
+.container {
+    max-height: 500px;
+    max-width: 100vw;
+}
+
+.presentation {
+    padding-top: 15vw;
+    padding-right: 10vw;
+    color:aliceblue;
+    float: right;
+    text-align: center;
+
+    font-size: 1.5vw;
+
+    translate: 0 -100px;
+}
+
+#present {
+    animation: slide 2s;
+}
+
+@keyframes slide {
+    0% {
+    transform: translateY(-50%);
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+
+
+/* Page resume */
+#intPerso {
+    color: aliceblue;
+    font-size: 1.2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 3vw;
+}
+
+.center {
+    width: 65vw;
+    margin: auto;
+    margin-bottom: 10vh;
+    color: aliceblue;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+.monResume {
+    background-color: #8e6aa1;
+    width: 65vw;
+    margin: auto;
+    border-radius: 2%;
+    margin-bottom: 10vh;
+    animation: slide 2s;
+}
+
+.statement {
+    width: 95%;
+    padding-left: 2%;
+    text-align: justify;
+    color: aliceblue;
+}
+
+.columns {
+    padding: 10px;
+    color: #240c31;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
+    font-size: 1.2vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.monResume div div{
+    color: aliceblue;
+}
+
+.monResume h2 {
+    text-align: left;
+}
+.monResume div h3{
+    grid-column: 1/ -1;
+}
+
+.btn {
+    position: relative;
+    top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    text-align: center;
+    background: #8e6aa1;
+    color: white;
+    font-size: 1.2vw;
+    border-radius: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    border: none;
+}
+
+.btn:hover{
+    padding: 12px;
+    font-size: 1.3vw;
+}
+
+/* page me contacter */
+.contact {
+    width: 65vw;
+    margin: auto;
+    margin-bottom: 10vh;
+
+    color: aliceblue;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.contact a{
+    color: aliceblue;
+}
+
+.contact a:hover {
+    font-size: 1.8vw;
+}
+
+.contact a i {
+     color: aliceblue;
+}
+
+/* .email {
+    color: aliceblue;
+
+    
+}
+
+.phoneNumber {
+    color: aliceblue;
+
+} */
