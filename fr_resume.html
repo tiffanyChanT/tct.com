@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--- Tiffany Chan-Tave --->
+<html lang="fr">
+
+  <head>
+		<meta charset="UTF-8"/>
+		<title> Accueil </title>
+		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+
+    <body>
+
+        <header>
+			<div class="controls">
+				<div id="controlG" onclick="tournerG()" > < </div>
+				<div id="controlD" onclick="tournerD()"> > </div>
+				<div id="controlPause" onclick="pause()">II</div>
+			</div>
+
+			<div id="menu">
+				<div id="menu1" class="nav-cd"><a href="fr_notes.html" title="notes">Notes</a></div>
+				<div id="menu2" class="nav-cd"><a href="fr_projets.html" title="projets">Mes projets</a></div>
+				<div id="menu3" class="nav-cd"><a href="fr_index.html" title="Accueil"> Accueil </a></div>
+				<div id="menu4" class="nav-cd"><a href="fr_resume.html" title="resume">Mon résumé</a></div>
+				<div id="menu5" class="nav-cd"><a href="fr_contact.html" title="contact">Me contacter</a></div>
+				<div id="menu6" class="nav-cd"><a href="en_index.html" title="Accueil">English</a></div>
+
+				<div id="menu7" class="nav-cd"><a href="fr_notes.html" title="notes">Notes</a></div>
+				<div id="menu8" class="nav-cd"><a href="fr_projets.html" title="projets">Mes projets</a></div>
+				<div id="menu9" class="nav-cd"><a href="fr_index.html" title="Accueil"> Accueil </a></div>
+				<div id="menu10" class="nav-cd"><a href="fr_resume.html" title="resume">Mon résumé</a></div>
+				<div id="menu11" class="nav-cd"><a href="fr_contact.html" title="contact">Me contacter</a></div>
+				<div id="menu12" class="nav-cd"><a href="en_index.html" title="Accueil">English</a></div>
+			</div>
+
+        </header>
+
+        <main>
+			
+
+			<div class="center">
+				<h2> Mon résumé/Curriculum Vitae </h2>
+                <div>Vous pouvez télécharger la version pdf de mon CV ici
+                    <br>
+                    <a class="btn" href="./assets/pdf/CV_Tiffany Chan-Tave.pdf" titre="telecharger" download="">Version pdf</a>
+                    <br> <br> <br>
+                    Ou vous pouvez le lire ici! <br>
+					<button class="btn" onclick="papier('resumePapier')">Résumé de Tiffany Chan-Tave</button>
+				</div>
+			</div>
+
+			<div class="circle-container">
+				<div id="circle1" class="moving-circles"> </div>
+				<div id="circle2" class="moving-circles"> </div>
+				<div id="circle3" class="moving-circles"> </div>
+				<div id="circle4" class="moving-circles"> </div>
+			</div>
+
+			<div id="resumePapier" class="monResume">
+				<div class="columns">
+					<h2>Tiffany Chan-Tave</h2>
+					<p class="contactInfo">
+						438-797-7903 <br>
+						tiffany_chantave@hotmail.com <br>
+						Grand Montréal, Laval
+					</p>
+				</div>
+				
+
+				<div class="statement">
+					<h3>Résumé</h3>
+					<div >
+						Récemment diplômée d’un baccalauréat en informatique, 
+						j’ai développé une solide compréhension du développement
+						logiciel, des algorithmes et des structures de données.
+						À travers divers projets universitaires et personnels,
+						j’ai acquis la maîtrise de plusieurs langages et outils
+						de développement. Motivée à appliquer mes connaissances
+						dans des situations réelles, je suis déterminée à 
+						approfondir mes connaissances techniques et à relever
+						de nouveaux défis au sein d’un environnement propice
+						à l’apprentissage continu.
+					</div>
+				</div>
+
+				<div class="columns">
+					<h3>Éducation/Formation</h3>
+
+					<div>
+						Université de Montréal <br>
+						Diplôme d'études universitaires <br>
+						Baccalauréat en informatique
+					</div>
+					<div>2023-2025</div>
+
+					<div>
+						Université de Montréal <br>
+						Baccalaurét en mathématiques
+					</div>
+					<div>2021-2023</div>
+				</div>
+
+				<div class="columns">
+					<h3>Expérience de travail</h3>
+
+					<div>
+						Professeure de danse <br>
+						École de dans St-bruno de Laval
+					</div>
+					<div>2021-présent</div>
+
+					<div>
+						Professeure de danse <br>
+						Danse Propulsion
+					</div>
+					<div>2023-2024</div>
+					
+					<div>
+						Préposée au comptoir
+						SAAQ
+					</div>
+					<div>2019-2020</div>
+
+				</div>
+
+				<div class="statement">
+					<h3>Langages et outils de développement</h3>
+					<div>
+						Environnement Windows, Office, Excel avancé (VBA) <br>
+						R Studio, SAS <br>
+						Python, Java, Javascript, SQL, HTML, CSS
+					</div>
+					
+
+				</div>
+
+				<div class="columns">
+					<h3>Langues parlées</h3>
+					<div>
+						Français: Langue maternelle <br>
+						Anglais: Fluente
+					</div>
+					<div>
+						Études faites en français
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="center">
+				Si cela vous intéresse, voici mes intérêts personnels autres que l'informatique. <br>
+				<button class="btn" onclick="papier('intPerso')">Mes intérêts personnels</button> <br>
+			</div>
+
+			<div id="intPerso" class="monResume">
+				<h3>La danse</h3>
+				Comme vous avez pu le lire sur mon résumé, je suis professeure de danse depuis quelques temps. <br>
+				La danse est mon hobby, mon sport, mon art. Je pratique la danse depuis petite et j'aime toujours autant danser qu'avant. <br>
+				Danser dans une troupe et enseigner aux côtés d'autres danseurs m'ont beaucoup appris sur le travail d'équipe. <br>
+				Dans le monde de la danse, il faut collaborer avec des personnes de toutes sortes de background, avec différents skillsets et expériences. <br>
+				<br>
+				La danse m'a aussi appris qu'il y a toujours moyen de s'améliorer, qu'on peut toujours travailler sur nos compétences et devenir meilleur. <br>
+				La perfection est quelque chose d'inatteignable en théorie, mais qu'on poursuit toujours avec espoir.
+
+				<h3>Les arts</h3>
+				J'ai toujours été une personne attirée par les arts, que ce soit les arts de la scène, visuels, littéraires, musicals... <br>
+				Je suis une personne créative qui espère utiliser cette créativité dans mon travail.
+
+			</div>
+        </main>
+        
+		<footer>
+				
+		</footer>
+		<script>
+			document.getElementById('resumePapier').hidden = true;
+			document.getElementById('intPerso').hidden = true;
+		</script>
+		<script type="text/javascript" src="./assets/js/myscript.js"></script>
+	</body>
+
+
+</html>
